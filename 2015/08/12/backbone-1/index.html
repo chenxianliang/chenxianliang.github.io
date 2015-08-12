@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>backbone (1) | 风色Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Backbone是构建javascript应用程序的一个优秀的类库。他简洁、轻量级、功能实在。
+backbone采用MVC模式，本身提供了模型、控制器和视图从而我们应用程序的骨架便形成。
+backbone依赖于underscore，他是一个类库，提供了60多个函数处理数组操作、函数绑定，以及javascript模板机制。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="backbone (1)">
+<meta property="og:url" content="http://hexo.js571.com/2015/08/12/backbone-1/index.html">
+<meta property="og:site_name" content="风色Web">
+<meta property="og:description" content="Backbone是构建javascript应用程序的一个优秀的类库。他简洁、轻量级、功能实在。
+backbone采用MVC模式，本身提供了模型、控制器和视图从而我们应用程序的骨架便形成。
+backbone依赖于underscore，他是一个类库，提供了60多个函数处理数组操作、函数绑定，以及javascript模板机制。">
+<meta property="og:updated_time" content="2015-08-12T08:47:42.421Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="backbone (1)">
+<meta name="twitter:description" content="Backbone是构建javascript应用程序的一个优秀的类库。他简洁、轻量级、功能实在。
+backbone采用MVC模式，本身提供了模型、控制器和视图从而我们应用程序的骨架便形成。
+backbone依赖于underscore，他是一个类库，提供了60多个函数处理数组操作、函数绑定，以及javascript模板机制。">
+  
+    <link rel="alternative" href="/atom.xml" title="风色Web" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://jira.ixiaopu.com/secure/useravatar?ownerId=chenxianliang&amp;avatarId=10914" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Maat Chan</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">web改变世界</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chenxianliang" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/MVC/" style="font-size: 10px;">MVC</a> <a href="/tags/backbone/" style="font-size: 10px;">backbone</a> <a href="/tags/闲聊扯淡/" style="font-size: 10px;">闲聊扯淡</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.js571.com/">马特的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.xlsdg.org/">xlsdg</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Maat Chan</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://jira.ixiaopu.com/secure/useravatar?ownerId=chenxianliang&amp;avatarId=10914" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Maat Chan</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">web改变世界</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chenxianliang" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-backbone-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/12/backbone-1/" class="article-date">
+  	<time datetime="2015-08-12T14:10:33.000Z" itemprop="datePublished">2015-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      backbone (1)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVC/">MVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/backbone/">backbone</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/backbone/">backbone</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Backbone&#x662F;&#x6784;&#x5EFA;javascript&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x7C7B;&#x5E93;&#x3002;&#x4ED6;&#x7B80;&#x6D01;&#x3001;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x529F;&#x80FD;&#x5B9E;&#x5728;&#x3002;</p>
+<p>backbone&#x91C7;&#x7528;MVC&#x6A21;&#x5F0F;&#xFF0C;&#x672C;&#x8EAB;&#x63D0;&#x4F9B;&#x4E86;&#x6A21;&#x578B;&#x3001;&#x63A7;&#x5236;&#x5668;&#x548C;&#x89C6;&#x56FE;&#x4ECE;&#x800C;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9AA8;&#x67B6;&#x4FBF;&#x5F62;&#x6210;&#x3002;</p>
+<p>backbone&#x4F9D;&#x8D56;&#x4E8E;underscore&#xFF0C;&#x4ED6;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x5E93;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;60&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x5904;&#x7406;&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x3001;&#x51FD;&#x6570;&#x7ED1;&#x5B9A;&#xFF0C;&#x4EE5;&#x53CA;javascript&#x6A21;&#x677F;&#x673A;&#x5236;&#x3002;</p>
+<a id="more"></a>
+<h2 id="backbone-&#x4E2D;&#x7684;mvc">Backbone &#x4E2D;&#x7684;MVC</h2>
+<ol>
+<li>
+<p>M: model <code>&#x6A21;&#x578B;</code></p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x578B;</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x65B9;&#x6CD5;1</span></span><br><span class="line"><span class="keyword">var</span> model_1 = <span class="keyword">new</span> Backbone.Model({<span class="string">&apos;name&apos;</span>:<span class="string">&apos;hello&apos;</span>});</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Model = Backbone.Model.extend({<span class="string">&apos;name&apos;</span>:<span class="literal">null</span>});</span><br><span class="line"><span class="keyword">var</span> model_2 = <span class="keyword">new</span> Model({name:<span class="string">&apos;maat&apos;</span>});</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x521D;&#x59CB;&#x5316;</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> Model = Backbone.Model.extend({</span><br><span class="line">	<span class="comment">//&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;</span></span><br><span class="line">	initialize: <span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>{</span><br><span class="line">		alert(a);</span><br><span class="line">	}</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> Model(<span class="string">&apos;1&apos;</span>);</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">* &#x5BF9;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#x8D4B;&#x503C;</span><br><span class="line"></span><br><span class="line">&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#xFF0C;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;</span></span><br></pre></td></tr></table></figure>
+<p>var Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+alert(&#x2018;Hey, you create me!&#x2019;);<br>
+},<br>
+defaults: {<br>
+name:&#x2018;&#x5F20;&#x4E09;&#x2019;,<br>
+age: &#x2018;38&#x2019;<br>
+}<br>
+});</p>
+<p>var man = new Man;<br>
+alert(man.get(&#x2018;name&#x2019;));</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;&#x8D4B;&#x503C;&#x65F6;&#x5B9A;&#x4E49;</span><br></pre></td></tr></table></figure>
+<p>var Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+alert(&#x2018;Hey, you create me!&#x2019;);<br>
+}<br>
+});</p>
+<p>var man = new Man;<br>
+man.set({name:&#x2018;maat&#x2019;});<br>
+alert(man.get(&#x2018;name&#x2019;));</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">* </span>&#x76D1;&#x6D4B;&#x5BF9;&#x8C61;&#x79CD;&#x5C5E;&#x6027;&#x7684;&#x53D8;&#x5316;</span><br></pre></td></tr></table></figure>
+<p>Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+//&#x521D;&#x59CB;&#x5316;&#x65F6;&#x7ED1;&#x5B9A;&#x76D1;&#x542C;<br>
+this.bind(&#x201C;change:name&#x201D;,function(){<br>
+var name = this.get(&#x201C;name&#x201D;);<br>
+alert(&#x201C;&#x4F60;&#x6539;&#x53D8;&#x4E86;name&#x5C5E;&#x6027;&#x4E3A;&#xFF1A;&#x201D; + name);<br>
+//&#x987A;&#x4FBF;&#x6267;&#x884C;&#x4E0B;aboutMe&#x65B9;&#x6CD5;<br>
+console.log(this.aboutMe());<br>
+});<br>
+},<br>
+defaults: {<br>
+name:&#x2018;&#x5F20;&#x4E09;&#x2019;<br>
+},<br>
+aboutMe: function(){<br>
+return &#x2018;&#x6211;&#x53EB;&#x2019; + this.get(&#x2018;name&#x2019;) ;<br>
+}<br>
+});<br>
+var man = new Man;<br>
+man.set({name:&#x2018;maat&#x2019;})  //&#x89E6;&#x53D1;&#x7ED1;&#x5B9A;&#x7684;change&#x4E8B;&#x4EF6;&#xFF0C;alert&#x3002;</p>
+<pre><code></code></pre>
+</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/11/first/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello Maat</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="backbone-1" data-title="backbone (1)" data-url="http://hexo.js571.com/2015/08/12/backbone-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"js571"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Maat Chan
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hexo.js571.com/2015/08/12/backbone-1/</loc>
+    <lastmod>2015-08-12T08:47:42.421Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hexo.js571.com/2015/08/11/first/</loc>
     <lastmod>2015-08-11T13:40:36.867Z</lastmod>
   </url>

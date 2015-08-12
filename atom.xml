@@ -5,7 +5,7 @@
   <subtitle><![CDATA[web改变世界]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hexo.js571.com//"/>
-  <updated>2015-08-11T13:40:36.867Z</updated>
+  <updated>2015-08-12T08:47:42.421Z</updated>
   <id>http://hexo.js571.com//</id>
   
   <author>
@@ -14,6 +14,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[backbone (1)]]></title>
+    <link href="http://hexo.js571.com/2015/08/12/backbone-1/"/>
+    <id>http://hexo.js571.com/2015/08/12/backbone-1/</id>
+    <published>2015-08-12T14:10:33.000Z</published>
+    <updated>2015-08-12T08:47:42.421Z</updated>
+    <content type="html"><![CDATA[<p>Backbone&#x662F;&#x6784;&#x5EFA;javascript&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x7C7B;&#x5E93;&#x3002;&#x4ED6;&#x7B80;&#x6D01;&#x3001;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x529F;&#x80FD;&#x5B9E;&#x5728;&#x3002;</p>
+<p>backbone&#x91C7;&#x7528;MVC&#x6A21;&#x5F0F;&#xFF0C;&#x672C;&#x8EAB;&#x63D0;&#x4F9B;&#x4E86;&#x6A21;&#x578B;&#x3001;&#x63A7;&#x5236;&#x5668;&#x548C;&#x89C6;&#x56FE;&#x4ECE;&#x800C;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9AA8;&#x67B6;&#x4FBF;&#x5F62;&#x6210;&#x3002;</p>
+<p>backbone&#x4F9D;&#x8D56;&#x4E8E;underscore&#xFF0C;&#x4ED6;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x5E93;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;60&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x5904;&#x7406;&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x3001;&#x51FD;&#x6570;&#x7ED1;&#x5B9A;&#xFF0C;&#x4EE5;&#x53CA;javascript&#x6A21;&#x677F;&#x673A;&#x5236;&#x3002;</p>
+<a id="more"></a>
+<h2 id="backbone-&#x4E2D;&#x7684;mvc">Backbone &#x4E2D;&#x7684;MVC</h2>
+<ol>
+<li>
+<p>M: model <code>&#x6A21;&#x578B;</code></p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x578B;</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x65B9;&#x6CD5;1</span></span><br><span class="line"><span class="keyword">var</span> model_1 = <span class="keyword">new</span> Backbone.Model({<span class="string">&apos;name&apos;</span>:<span class="string">&apos;hello&apos;</span>});</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Model = Backbone.Model.extend({<span class="string">&apos;name&apos;</span>:<span class="literal">null</span>});</span><br><span class="line"><span class="keyword">var</span> model_2 = <span class="keyword">new</span> Model({name:<span class="string">&apos;maat&apos;</span>});</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x521D;&#x59CB;&#x5316;</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> Model = Backbone.Model.extend({</span><br><span class="line">	<span class="comment">//&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;</span></span><br><span class="line">	initialize: <span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>{</span><br><span class="line">		alert(a);</span><br><span class="line">	}</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> Model(<span class="string">&apos;1&apos;</span>);</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">* &#x5BF9;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#x8D4B;&#x503C;</span><br><span class="line"></span><br><span class="line">&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#xFF0C;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;</span></span><br></pre></td></tr></table></figure>
+<p>var Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+alert(&#x2018;Hey, you create me!&#x2019;);<br>
+},<br>
+defaults: {<br>
+name:&#x2018;&#x5F20;&#x4E09;&#x2019;,<br>
+age: &#x2018;38&#x2019;<br>
+}<br>
+});</p>
+<p>var man = new Man;<br>
+alert(man.get(&#x2018;name&#x2019;));</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;&#x8D4B;&#x503C;&#x65F6;&#x5B9A;&#x4E49;</span><br></pre></td></tr></table></figure>
+<p>var Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+alert(&#x2018;Hey, you create me!&#x2019;);<br>
+}<br>
+});</p>
+<p>var man = new Man;<br>
+man.set({name:&#x2018;maat&#x2019;});<br>
+alert(man.get(&#x2018;name&#x2019;));</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">* </span>&#x76D1;&#x6D4B;&#x5BF9;&#x8C61;&#x79CD;&#x5C5E;&#x6027;&#x7684;&#x53D8;&#x5316;</span><br></pre></td></tr></table></figure>
+<p>Man = Backbone.Model.extend({<br>
+initialize: function(){<br>
+//&#x521D;&#x59CB;&#x5316;&#x65F6;&#x7ED1;&#x5B9A;&#x76D1;&#x542C;<br>
+this.bind(&#x201C;change:name&#x201D;,function(){<br>
+var name = this.get(&#x201C;name&#x201D;);<br>
+alert(&#x201C;&#x4F60;&#x6539;&#x53D8;&#x4E86;name&#x5C5E;&#x6027;&#x4E3A;&#xFF1A;&#x201D; + name);<br>
+//&#x987A;&#x4FBF;&#x6267;&#x884C;&#x4E0B;aboutMe&#x65B9;&#x6CD5;<br>
+console.log(this.aboutMe());<br>
+});<br>
+},<br>
+defaults: {<br>
+name:&#x2018;&#x5F20;&#x4E09;&#x2019;<br>
+},<br>
+aboutMe: function(){<br>
+return &#x2018;&#x6211;&#x53EB;&#x2019; + this.get(&#x2018;name&#x2019;) ;<br>
+}<br>
+});<br>
+var man = new Man;<br>
+man.set({name:&#x2018;maat&#x2019;})  //&#x89E6;&#x53D1;&#x7ED1;&#x5B9A;&#x7684;change&#x4E8B;&#x4EF6;&#xFF0C;alert&#x3002;</p>
+<pre><code></code></pre>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Backbone是构建javascript应用程序的一个优秀的类库。他简洁、轻量级、功能实在。</p>
+<p>backbone采用MVC模式，本身提供了模型、控制器和视图从而我们应用程序的骨架便形成。</p>
+<p>backbone依赖于underscore，他是一个类库，提供了60多个函数处理数组操作、函数绑定，以及javascript模板机制。</p>]]>
+    
+    </summary>
+    
+      <category term="JS" scheme="http://hexo.js571.com/tags/JS/"/>
+    
+      <category term="MVC" scheme="http://hexo.js571.com/tags/MVC/"/>
+    
+      <category term="backbone" scheme="http://hexo.js571.com/tags/backbone/"/>
+    
+      <category term="backbone" scheme="http://hexo.js571.com/categories/backbone/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello Maat]]></title>
