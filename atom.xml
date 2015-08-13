@@ -4,9 +4,9 @@
   <title><![CDATA[风色Web]]></title>
   <subtitle><![CDATA[web改变世界]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://hexo.js571.com//"/>
+  <link href="http://blog.js571.com//"/>
   <updated>2015-08-12T09:19:59.658Z</updated>
-  <id>http://hexo.js571.com//</id>
+  <id>http://blog.js571.com//</id>
   
   <author>
     <name><![CDATA[Maat Chan]]></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[backbone (1)]]></title>
-    <link href="http://hexo.js571.com/2015/08/12/backbone-1/"/>
-    <id>http://hexo.js571.com/2015/08/12/backbone-1/</id>
+    <link href="http://blog.js571.com/2015/08/12/backbone-1/"/>
+    <id>http://blog.js571.com/2015/08/12/backbone-1/</id>
     <published>2015-08-12T14:10:33.000Z</published>
     <updated>2015-08-12T09:19:59.658Z</updated>
     <content type="html"><![CDATA[<p>Backbone&#x662F;&#x6784;&#x5EFA;javascript&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x7C7B;&#x5E93;&#x3002;&#x4ED6;&#x7B80;&#x6D01;&#x3001;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x529F;&#x80FD;&#x5B9E;&#x5728;&#x3002;</p>
@@ -61,20 +61,20 @@
     
     </summary>
     
-      <category term="JS" scheme="http://hexo.js571.com/tags/JS/"/>
+      <category term="JS" scheme="http://blog.js571.com/tags/JS/"/>
     
-      <category term="MVC" scheme="http://hexo.js571.com/tags/MVC/"/>
+      <category term="MVC" scheme="http://blog.js571.com/tags/MVC/"/>
     
-      <category term="backbone" scheme="http://hexo.js571.com/tags/backbone/"/>
+      <category term="backbone" scheme="http://blog.js571.com/tags/backbone/"/>
     
-      <category term="backbone" scheme="http://hexo.js571.com/categories/backbone/"/>
+      <category term="backbone" scheme="http://blog.js571.com/categories/backbone/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello Maat]]></title>
-    <link href="http://hexo.js571.com/2015/08/11/first/"/>
-    <id>http://hexo.js571.com/2015/08/11/first/</id>
+    <link href="http://blog.js571.com/2015/08/11/first/"/>
+    <id>http://blog.js571.com/2015/08/11/first/</id>
     <published>2015-08-11T12:30:00.000Z</published>
     <updated>2015-08-11T13:40:36.867Z</updated>
     <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure>]]></content>
@@ -82,9 +82,9 @@
     <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span clas]]>
     </summary>
     
-      <category term="闲聊扯淡" scheme="http://hexo.js571.com/tags/%E9%97%B2%E8%81%8A%E6%89%AF%E6%B7%A1/"/>
+      <category term="闲聊扯淡" scheme="http://blog.js571.com/tags/%E9%97%B2%E8%81%8A%E6%89%AF%E6%B7%A1/"/>
     
-      <category term="闲聊扯淡" scheme="http://hexo.js571.com/categories/%E9%97%B2%E8%81%8A%E6%89%AF%E6%B7%A1/"/>
+      <category term="闲聊扯淡" scheme="http://blog.js571.com/categories/%E9%97%B2%E8%81%8A%E6%89%AF%E6%B7%A1/"/>
     
   </entry>
   
